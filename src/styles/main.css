@@ -1,0 +1,98 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #186585;
+}
+blockquote,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+pre {
+  margin: 0;
+}
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+.divider {
+  height: 0.6rem;
+  width: 5.5rem;
+  background-color: #f88; /* #fa1e5a if heading were different color*/
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card {
+  display: grid;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 3rem;
+  min-height: 400px;
+  justify-content: center;
+  gap: 1em; box-shadow: 0 0 0 rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease-in-out
+}
+
+/* Transition to a bigger shadow on hover */
+.card:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.card a {
+  display: block;
+}
+.card:hover {
+  opacity: 1;
+}
+.card img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 20rem;
+}
+.card-content {
+  display: grid;
+  max-width: 500px;
+}
+.card h3 {
+  font-size: 1.875rem;
+}
+.card hr {
+  background-color: #f88; /*#ea364a;*/
+  width: 100px;
+  height: 4px;
+  margin: 0.25rem 0 1rem;
+}
+.card .status {
+  color:red;
+}
+@media screen and (min-width: 1024px) {
+  .card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .card:nth-child(odd) a:first-of-type, .productPageCard:nth-child(odd) div:first-of-type {
+    order: 1;
+  }
+  /* .card:nth-child(odd) .card-content p {
+    text-align: left;
+  } */
+
+  .card-content .btn {
+    justify-self: end;
+  }
+  .card:nth-child(odd) .card-content .btn {
+    justify-content: start;
+  }
+}
