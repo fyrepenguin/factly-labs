@@ -12,7 +12,7 @@ const ProductPageTemplate = ({ pageContext }) => {
       <Header
         title={product.header.title}
         description={product.header.description}
-        img={product.header.img}
+        img={`/${product.header.image}`}
         bg={product.header.bg}
       />
       {product.items.map((item, idx) => {
@@ -32,7 +32,11 @@ const ProductPageTemplate = ({ pageContext }) => {
             }}
           >
             <div>
-              <img src={item.img} alt="" />
+              <img
+                src={`/${item.image}`}
+                alt=""
+                sx={{ maxWidth: '20rem', mx: 'auto', display: 'block' }}
+              />
             </div>
             <div>
               <h3 sx={{ fontSize: '2rem' }}>{item.title}</h3>
